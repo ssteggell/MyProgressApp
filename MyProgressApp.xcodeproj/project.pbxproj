@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		912FCF542496D72900812C2D /* MyProgressApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 912FCF522496D72900812C2D /* MyProgressApp.xcdatamodeld */; };
+		912FCF562496D7FA00812C2D /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FCF552496D7FA00812C2D /* DataController.swift */; };
+		912FCF582496D90A00812C2D /* PhotoAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FCF572496D90A00812C2D /* PhotoAlbumViewController.swift */; };
+		912FCF5A2496DCCE00812C2D /* NewPicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FCF592496DCCE00812C2D /* NewPicViewController.swift */; };
+		912FCF5D24970F4400812C2D /* PhotoAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FCF5C24970F4400812C2D /* PhotoAlbumCell.swift */; };
+		912FCF5F249847CB00812C2D /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FCF5E249847CB00812C2D /* PhotosCollectionViewController.swift */; };
+		912FCF612499201D00812C2D /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FCF602499201D00812C2D /* PhotoCollectionViewCell.swift */; };
 		918FCBE62496CD1100AF2B45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918FCBE52496CD1100AF2B45 /* AppDelegate.swift */; };
 		918FCBE82496CD1100AF2B45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918FCBE72496CD1100AF2B45 /* SceneDelegate.swift */; };
 		918FCBEA2496CD1100AF2B45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918FCBE92496CD1100AF2B45 /* ViewController.swift */; };
 		918FCBED2496CD1100AF2B45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 918FCBEB2496CD1100AF2B45 /* Main.storyboard */; };
-		918FCBF02496CD1100AF2B45 /* MyProgressApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 918FCBEE2496CD1100AF2B45 /* MyProgressApp.xcdatamodeld */; };
 		918FCBF22496CD1300AF2B45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 918FCBF12496CD1300AF2B45 /* Assets.xcassets */; };
 		918FCBF52496CD1300AF2B45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 918FCBF32496CD1300AF2B45 /* LaunchScreen.storyboard */; };
 		918FCC002496CD1300AF2B45 /* MyProgressAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918FCBFF2496CD1300AF2B45 /* MyProgressAppTests.swift */; };
@@ -36,12 +42,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		912FCF532496D72900812C2D /* Progress.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Progress.xcdatamodel; sourceTree = "<group>"; };
+		912FCF552496D7FA00812C2D /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		912FCF572496D90A00812C2D /* PhotoAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumViewController.swift; sourceTree = "<group>"; };
+		912FCF592496DCCE00812C2D /* NewPicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPicViewController.swift; sourceTree = "<group>"; };
+		912FCF5C24970F4400812C2D /* PhotoAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumCell.swift; sourceTree = "<group>"; };
+		912FCF5E249847CB00812C2D /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		912FCF602499201D00812C2D /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		918FCBE22496CD1100AF2B45 /* MyProgressApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyProgressApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		918FCBE52496CD1100AF2B45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		918FCBE72496CD1100AF2B45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		918FCBE92496CD1100AF2B45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		918FCBEC2496CD1100AF2B45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		918FCBEF2496CD1100AF2B45 /* MyProgressApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyProgressApp.xcdatamodel; sourceTree = "<group>"; };
 		918FCBF12496CD1300AF2B45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		918FCBF42496CD1300AF2B45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		918FCBF62496CD1300AF2B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,7 +62,6 @@
 		918FCC012496CD1300AF2B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		918FCC062496CD1300AF2B45 /* MyProgressAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyProgressAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		918FCC0A2496CD1300AF2B45 /* MyProgressAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProgressAppUITests.swift; sourceTree = "<group>"; };
-		918FCC0C2496CD1300AF2B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,9 +89,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		912FCF4E2496D62E00812C2D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				918FCBEB2496CD1100AF2B45 /* Main.storyboard */,
+				918FCBF32496CD1300AF2B45 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		912FCF4F2496D65800812C2D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				912FCF522496D72900812C2D /* MyProgressApp.xcdatamodeld */,
+				912FCF552496D7FA00812C2D /* DataController.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		912FCF502496D66C00812C2D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				912FCF5B24970F2E00812C2D /* Cells */,
+				918FCBE92496CD1100AF2B45 /* ViewController.swift */,
+				912FCF572496D90A00812C2D /* PhotoAlbumViewController.swift */,
+				912FCF5E249847CB00812C2D /* PhotosCollectionViewController.swift */,
+				912FCF592496DCCE00812C2D /* NewPicViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		912FCF512496D68200812C2D /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				918FCBF12496CD1300AF2B45 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		912FCF5B24970F2E00812C2D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				912FCF5C24970F4400812C2D /* PhotoAlbumCell.swift */,
+				912FCF602499201D00812C2D /* PhotoCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		918FCBD92496CD1100AF2B45 = {
 			isa = PBXGroup;
 			children = (
+				918FCBE52496CD1100AF2B45 /* AppDelegate.swift */,
 				918FCBE42496CD1100AF2B45 /* MyProgressApp */,
 				918FCBFE2496CD1300AF2B45 /* MyProgressAppTests */,
 				918FCC092496CD1300AF2B45 /* MyProgressAppUITests */,
@@ -101,14 +160,12 @@
 		918FCBE42496CD1100AF2B45 /* MyProgressApp */ = {
 			isa = PBXGroup;
 			children = (
-				918FCBE52496CD1100AF2B45 /* AppDelegate.swift */,
-				918FCBE72496CD1100AF2B45 /* SceneDelegate.swift */,
-				918FCBE92496CD1100AF2B45 /* ViewController.swift */,
-				918FCBEB2496CD1100AF2B45 /* Main.storyboard */,
-				918FCBF12496CD1300AF2B45 /* Assets.xcassets */,
-				918FCBF32496CD1300AF2B45 /* LaunchScreen.storyboard */,
 				918FCBF62496CD1300AF2B45 /* Info.plist */,
-				918FCBEE2496CD1100AF2B45 /* MyProgressApp.xcdatamodeld */,
+				912FCF512496D68200812C2D /* Assets */,
+				912FCF4F2496D65800812C2D /* Model */,
+				918FCBE72496CD1100AF2B45 /* SceneDelegate.swift */,
+				912FCF4E2496D62E00812C2D /* Storyboards */,
+				912FCF502496D66C00812C2D /* View Controllers */,
 			);
 			path = MyProgressApp;
 			sourceTree = "<group>";
@@ -126,7 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				918FCC0A2496CD1300AF2B45 /* MyProgressAppUITests.swift */,
-				918FCC0C2496CD1300AF2B45 /* Info.plist */,
 			);
 			path = MyProgressAppUITests;
 			sourceTree = "<group>";
@@ -263,8 +319,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				918FCBEA2496CD1100AF2B45 /* ViewController.swift in Sources */,
+				912FCF612499201D00812C2D /* PhotoCollectionViewCell.swift in Sources */,
+				912FCF5D24970F4400812C2D /* PhotoAlbumCell.swift in Sources */,
+				912FCF582496D90A00812C2D /* PhotoAlbumViewController.swift in Sources */,
+				912FCF5A2496DCCE00812C2D /* NewPicViewController.swift in Sources */,
+				912FCF562496D7FA00812C2D /* DataController.swift in Sources */,
 				918FCBE62496CD1100AF2B45 /* AppDelegate.swift in Sources */,
-				918FCBF02496CD1100AF2B45 /* MyProgressApp.xcdatamodeld in Sources */,
+				912FCF5F249847CB00812C2D /* PhotosCollectionViewController.swift in Sources */,
+				912FCF542496D72900812C2D /* MyProgressApp.xcdatamodeld in Sources */,
 				918FCBE82496CD1100AF2B45 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +501,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8UD54HH47V;
 				INFOPLIST_FILE = MyProgressApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,6 +519,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8UD54HH47V;
 				INFOPLIST_FILE = MyProgressApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -590,12 +654,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		918FCBEE2496CD1100AF2B45 /* MyProgressApp.xcdatamodeld */ = {
+		912FCF522496D72900812C2D /* MyProgressApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				918FCBEF2496CD1100AF2B45 /* MyProgressApp.xcdatamodel */,
+				912FCF532496D72900812C2D /* Progress.xcdatamodel */,
 			);
-			currentVersion = 918FCBEF2496CD1100AF2B45 /* MyProgressApp.xcdatamodel */;
+			currentVersion = 912FCF532496D72900812C2D /* Progress.xcdatamodel */;
 			path = MyProgressApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
