@@ -147,6 +147,10 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="gQu-qY-8jn">
+                        <nil key="title"/>
+                        <slider key="titleView" hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="IfM-YL-162">
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </slider>
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="c27-Fs-CqW">
                             <connections>
                                 <action selector="pickAnImageFromCamera:" destination="cX3-aA-mVS" id="Xpk-fw-JHE"/>
@@ -155,6 +159,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cameraButton" destination="c27-Fs-CqW" id="HZQ-gH-aKs"/>
+                        <outlet property="cameraSlider" destination="IfM-YL-162" id="Thw-ff-zWi"/>
                         <outlet property="photoCollectionView" destination="bFG-Z6-uNV" id="DlF-Yb-Evl"/>
                     </connections>
                 </collectionViewController>

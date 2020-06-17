@@ -18,18 +18,19 @@ class PhotosCollectionViewController: UICollectionViewController, NSFetchedResul
     var savedPhotos = [Photos]()
     @IBOutlet var photoCollectionView: UICollectionView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
+    @IBOutlet var cameraSlider: UISlider!
     var fetchedResultsController:NSFetchedResultsController<Photos>!
     
     
     func fetchPhotos() -> [Photos]? {
         var photoArray: [Photos] = []
         let fetchRequest: NSFetchRequest<Photos> = Photos.fetchRequest()
-        let context = dataController.viewContext 
-        let predicate = NSPredicate(format: "albums == %@", albums)
+        let context = dataController.viewContext
+//        let predicate = NSPredicate(format: "albums == %@", albums)
 
-        print("Predicate: \(predicate)")
+//        print("Predicate: \(predicate)")
 //        let sortDescriptor = NSSortDescriptor(key: "creationDate", ascending: true)
-        fetchRequest.predicate = predicate
+//        fetchRequest.predicate = predicate
         fetchRequest.sortDescriptors = []
         fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         fetchedResultsController.delegate = self
@@ -76,6 +77,7 @@ class PhotosCollectionViewController: UICollectionViewController, NSFetchedResul
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        cameraSlider.isHidden = true
 //        let savedPhoto = fetchImage()
       let savedPhoto = fetchPhotos()
         if savedPhoto != nil && savedPhoto?.count != 0 {
@@ -110,10 +112,15 @@ class PhotosCollectionViewController: UICollectionViewController, NSFetchedResul
         imagePicker.allowsEditing = true
         imagePicker.delegate = self
         present(imagePicker, animated: true)
+        cameraSlider.isHidden = false
         let mainView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height-150))
-        let blockView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.frame.size.width, height: 150))
-        blockView.backgroundColor = UIColor.red
-        mainView.addSubview(blockView)
+        //let blockView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.width))
+//        let imageName = "yourImage.png"
+        let image = UIImage(named: "placeholder")
+        let imageView = UIImageView(image: image!)
+        imageView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 600)
+//        let blockView = UIImage(named: "placeholder")
+        mainView.addSubview(imageView)
         imagePicker.cameraOverlayView = mainView
         
     }
@@ -123,6 +130,7 @@ class PhotosCollectionViewController: UICollectionViewController, NSFetchedResul
         
         guard let image = info[.editedImage] as? UIImage else {
             print("No image found")
+            cameraSlider.isHidden = true
             return
         }
         
