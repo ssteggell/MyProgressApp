@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9125964C249ECD9D00D24D58 /* CustomCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9125964B249ECD9D00D24D58 /* CustomCameraView.swift */; };
 		912FCF542496D72900812C2D /* MyProgressApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 912FCF522496D72900812C2D /* MyProgressApp.xcdatamodeld */; };
 		912FCF562496D7FA00812C2D /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FCF552496D7FA00812C2D /* DataController.swift */; };
 		912FCF582496D90A00812C2D /* PhotoAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FCF572496D90A00812C2D /* PhotoAlbumViewController.swift */; };
-		912FCF5A2496DCCE00812C2D /* NewPicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FCF592496DCCE00812C2D /* NewPicViewController.swift */; };
+		912FCF5A2496DCCE00812C2D /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FCF592496DCCE00812C2D /* PhotoDetailViewController.swift */; };
 		912FCF5D24970F4400812C2D /* PhotoAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FCF5C24970F4400812C2D /* PhotoAlbumCell.swift */; };
 		912FCF5F249847CB00812C2D /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FCF5E249847CB00812C2D /* PhotosCollectionViewController.swift */; };
 		912FCF612499201D00812C2D /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912FCF602499201D00812C2D /* PhotoCollectionViewCell.swift */; };
+		915E6EAC24D39FB900F64A22 /* MotviationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915E6EAB24D39FB900F64A22 /* MotviationViewController.swift */; };
 		918FCBE62496CD1100AF2B45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918FCBE52496CD1100AF2B45 /* AppDelegate.swift */; };
 		918FCBE82496CD1100AF2B45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918FCBE72496CD1100AF2B45 /* SceneDelegate.swift */; };
 		918FCBEA2496CD1100AF2B45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918FCBE92496CD1100AF2B45 /* ViewController.swift */; };
@@ -22,6 +24,7 @@
 		918FCBF52496CD1300AF2B45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 918FCBF32496CD1300AF2B45 /* LaunchScreen.storyboard */; };
 		918FCC002496CD1300AF2B45 /* MyProgressAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918FCBFF2496CD1300AF2B45 /* MyProgressAppTests.swift */; };
 		918FCC0B2496CD1300AF2B45 /* MyProgressAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918FCC0A2496CD1300AF2B45 /* MyProgressAppUITests.swift */; };
+		91BD9572249BCF99008411DE /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BD9571249BCF99008411DE /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,13 +45,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9125964B249ECD9D00D24D58 /* CustomCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraView.swift; sourceTree = "<group>"; };
 		912FCF532496D72900812C2D /* Progress.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Progress.xcdatamodel; sourceTree = "<group>"; };
 		912FCF552496D7FA00812C2D /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		912FCF572496D90A00812C2D /* PhotoAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumViewController.swift; sourceTree = "<group>"; };
-		912FCF592496DCCE00812C2D /* NewPicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPicViewController.swift; sourceTree = "<group>"; };
+		912FCF592496DCCE00812C2D /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		912FCF5C24970F4400812C2D /* PhotoAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumCell.swift; sourceTree = "<group>"; };
 		912FCF5E249847CB00812C2D /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		912FCF602499201D00812C2D /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		915E6EAB24D39FB900F64A22 /* MotviationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotviationViewController.swift; sourceTree = "<group>"; };
 		918FCBE22496CD1100AF2B45 /* MyProgressApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyProgressApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		918FCBE52496CD1100AF2B45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		918FCBE72496CD1100AF2B45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +67,7 @@
 		918FCC012496CD1300AF2B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		918FCC062496CD1300AF2B45 /* MyProgressAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyProgressAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		918FCC0A2496CD1300AF2B45 /* MyProgressAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProgressAppUITests.swift; sourceTree = "<group>"; };
+		91BD9571249BCF99008411DE /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9125964A249ECD8E00D24D58 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9125964B249ECD9D00D24D58 /* CustomCameraView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		912FCF4E2496D62E00812C2D /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,7 +128,9 @@
 				918FCBE92496CD1100AF2B45 /* ViewController.swift */,
 				912FCF572496D90A00812C2D /* PhotoAlbumViewController.swift */,
 				912FCF5E249847CB00812C2D /* PhotosCollectionViewController.swift */,
-				912FCF592496DCCE00812C2D /* NewPicViewController.swift */,
+				912FCF592496DCCE00812C2D /* PhotoDetailViewController.swift */,
+				91BD9571249BCF99008411DE /* CameraViewController.swift */,
+				915E6EAB24D39FB900F64A22 /* MotviationViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -160,6 +176,7 @@
 		918FCBE42496CD1100AF2B45 /* MyProgressApp */ = {
 			isa = PBXGroup;
 			children = (
+				9125964A249ECD8E00D24D58 /* Helpers */,
 				918FCBF62496CD1300AF2B45 /* Info.plist */,
 				912FCF512496D68200812C2D /* Assets */,
 				912FCF4F2496D65800812C2D /* Model */,
@@ -318,12 +335,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91BD9572249BCF99008411DE /* CameraViewController.swift in Sources */,
 				918FCBEA2496CD1100AF2B45 /* ViewController.swift in Sources */,
 				912FCF612499201D00812C2D /* PhotoCollectionViewCell.swift in Sources */,
 				912FCF5D24970F4400812C2D /* PhotoAlbumCell.swift in Sources */,
+				9125964C249ECD9D00D24D58 /* CustomCameraView.swift in Sources */,
 				912FCF582496D90A00812C2D /* PhotoAlbumViewController.swift in Sources */,
-				912FCF5A2496DCCE00812C2D /* NewPicViewController.swift in Sources */,
+				912FCF5A2496DCCE00812C2D /* PhotoDetailViewController.swift in Sources */,
 				912FCF562496D7FA00812C2D /* DataController.swift in Sources */,
+				915E6EAC24D39FB900F64A22 /* MotviationViewController.swift in Sources */,
 				918FCBE62496CD1100AF2B45 /* AppDelegate.swift in Sources */,
 				912FCF5F249847CB00812C2D /* PhotosCollectionViewController.swift in Sources */,
 				912FCF542496D72900812C2D /* MyProgressApp.xcdatamodeld in Sources */,

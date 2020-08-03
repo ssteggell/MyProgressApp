@@ -147,7 +147,6 @@ class PhotoAlbumViewController: UITableViewController {
        }
     
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       // If this is a NotesListViewController, we'll configure its `Notebook`
        if let vc = segue.destination as? PhotosCollectionViewController {
            if let indexPath = tableView.indexPathForSelectedRow {
             vc.albums = fetchedResultsController.object(at: indexPath)
