@@ -80,13 +80,16 @@ class MotivationViewController: UICollectionViewController, NSFetchedResultsCont
         
         FlickrClient.sharedInstance.getPhotoUrl(page: currentPage) { (photos, error) in
             
-            if let error = error {
-                print("Error pulling data from Flickr")
-                let alertVC = UIAlertController(title: "Error", message: "Error retrieving data", preferredStyle: .alert)
-                alertVC.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
-                self.present(alertVC, animated: true)
-                print(error.localizedDescription)
-                return
+            
+                if let error = error {
+                    DispatchQueue.main.async {
+                    print("Error pulling data from Flickr")
+                    let alertVC = UIAlertController(title: "Error", message: "Error retrieving data", preferredStyle: .alert)
+                    alertVC.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+                    self.present(alertVC, animated: true)
+                    print(error.localizedDescription)
+                    return
+                }
             } else {
                 if let photos = photos {
                     DispatchQueue.main.async {
