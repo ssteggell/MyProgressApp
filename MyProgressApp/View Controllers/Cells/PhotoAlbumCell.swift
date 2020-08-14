@@ -11,15 +11,6 @@ import UIKit
 
 
 internal final class PhotoAlbumCell: UITableViewCell {
-    // Outlets
-//    @IBOutlet weak var nameLabel: UILabel!
-//
+
     @IBOutlet weak var nameLabel: UILabel!
-    //
-//    override func prepareForReuse() {
-//        super.prepareForReuse()
-//        nameLabel.text = nil
-
-//    }
-
 }

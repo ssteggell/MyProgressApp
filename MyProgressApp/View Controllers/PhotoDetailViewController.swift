@@ -22,39 +22,33 @@ class PhotoDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.navigationBarController?.navBar.isHidden = false
-//        self.navigationItem.rightBarButtonItem
         if let getImage = selectedImage
-               {
-               selectedImageView.image = getImage
-               }
+        {
+            selectedImageView.image = getImage
+        }
     }
     
-    
-    
-    
+    //Prepare for camera segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-            if (segue.identifier == "showCameraView") {
-//        if let cell = sender as? CameraViewController {
-//                selectedImage = selectedImage.img.image
+        
+        if (segue.identifier == "showCameraView") {
+            
             let destViewController : CameraViewController = segue.destination as! CameraViewController
             destViewController.previousPhoto = selectedImage.self
-                destViewController.albums = self.albums
-                print("prepare ran")
-             }
+            destViewController.albums = self.albums
+            print("prepare ran")
         }
+    }
     
+    //Share button pressed to save photo or send to others
     @IBAction func sharePressed(_ sender: Any) {
         let controller = UIActivityViewController(activityItems: [selectedImage!], applicationActivities: nil)
         
         controller.completionWithItemsHandler = { (activityType, completed, returnedItems, activityError) -> () in
             if (completed) {
-//                self.save(image: selectedImage)
                 self.dismiss(animated: true, completion: nil)
             }
         }
         self.present(controller, animated: true, completion: nil)
-        
     }
 }

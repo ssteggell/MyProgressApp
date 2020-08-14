@@ -19,6 +19,7 @@ class PhotoAlbumViewController: UITableViewController {
     
    var fetchedResultsController:NSFetchedResultsController<Albums>!
     
+    // Set up Fetch to get Albums
     fileprivate func setUpFetchedResultsController() {
         let context = dataController.viewContext
         let fetchRequest:NSFetchRequest<Albums> = Albums.fetchRequest()
@@ -44,7 +45,6 @@ class PhotoAlbumViewController: UITableViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-//        fetchedResultsController = nil
     }
     
     @IBAction func addNewAlbum(_ sender: Any) {
@@ -56,21 +56,17 @@ class PhotoAlbumViewController: UITableViewController {
         }
     }
     
-    
+    //Adding a new Album
     func presentNewNotebookAlert() {
         let alert = UIAlertController(title: "New Photo Album", message: "Enter name for album", preferredStyle: .alert)
-
-        // Create actions
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         let saveAction = UIAlertAction(title: "Save", style: .default) { [weak self] action in
             if let name = alert.textFields?.first?.text {
                 self?.addPhotoAlbum(name: name)
-
             }
         }
+        
         saveAction.isEnabled = false
-
-        // Add a text field
         alert.addTextField { textField in
             textField.placeholder = "Name"
             NotificationCenter.default.addObserver(forName: UITextField.textDidChangeNotification, object: textField, queue: .main) { notif in
@@ -82,12 +78,9 @@ class PhotoAlbumViewController: UITableViewController {
             }
             
         }
-
         alert.addAction(cancelAction)
         alert.addAction(saveAction)
         present(alert, animated: true, completion: nil)
-        
-    
     }
     
     func addPhotoAlbum(name: String) {
@@ -95,8 +88,6 @@ class PhotoAlbumViewController: UITableViewController {
         album.name = name
         album.creationDate = Date()
         try? dataController.viewContext.save()
-
-        
     }
     
     func updateEditButtonState() {
@@ -129,12 +120,7 @@ class PhotoAlbumViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let album = fetchedResultsController.object(at: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoAlbumCell", for: indexPath) as! PhotoAlbumCell
-
-        // Configure cell
-//        cell.nameLabel.text = album.name
         cell.nameLabel.text = album.name
-//        cell.imageView = UIImage(named: "placeholder")
-        //TODO: MAKE LATEST OR FIRST PHOTO THE DEFAULT IMAGE
 
         return cell
     }
@@ -150,28 +136,9 @@ class PhotoAlbumViewController: UITableViewController {
        if let vc = segue.destination as? PhotosCollectionViewController {
            if let indexPath = tableView.indexPathForSelectedRow {
             vc.albums = fetchedResultsController.object(at: indexPath)
-//            vc.dataController = dataController
-//            self.navigationController?.popViewController(animated: true)
            }
-//        navigationController?.pushViewController(vc, animated: true)
        }
-   }
-//    let CellDetailIdentifier = "CellDetailIdentifier"
-//
-//     func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        switch segue.identifier! {
-//        case CellDetailIdentifier:
-//            let destination = segue.destination as! PhotosCollectionViewController
-//            let indexPath = tableView.indexPathForSelectedRow!
-//            let selectedObject = fetchedResultsController.object(at: indexPath)
-//            destination.albums = selectedObject
-//        default:
-//            print("Unknown segue: \(segue.identifier)")
-//        }
-//    }
-    
-    
-    
+   }   
 }
 
 

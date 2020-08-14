@@ -25,7 +25,6 @@ class PhotosCollectionViewController: UICollectionViewController, NSFetchedResul
     
     
     //MARK: SETTING BAR BUTTON ITEMS
-    
     @IBOutlet weak var editBtn: UIBarButtonItem! 
     
     lazy var cancelBtn: UIBarButtonItem = {
@@ -56,7 +55,6 @@ class PhotosCollectionViewController: UICollectionViewController, NSFetchedResul
         fetchedResultsController.delegate = self
         do {
             try fetchedResultsController.performFetch()
-            //            let photoCount = try fetchedResultsController.managedObjectContext.count(for: fetchedResultsController.fetchRequest)
             let photoCount = try fetchedResultsController.managedObjectContext.count(for: fetchedResultsController.fetchRequest)
             print("photoCount: \(photoCount)")
             print("Performing Fetch")
@@ -100,42 +98,7 @@ class PhotosCollectionViewController: UICollectionViewController, NSFetchedResul
         savedPhotos = fetchPhotos()!
         showSavedResults()
     }
-    
-  
-    // -------------------------------------------------------------------------
-    //MARK: Set up Camera
-    /*@IBAction func pickAnImageFromCamera(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = .camera
-        imagePicker.allowsEditing = true
-        imagePicker.delegate = self
-        present(imagePicker, animated: true)
-        let mainView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
-        
-        //MARK: Setting the placeholder imagae overlay.
-        //TODO: Make Imageview be the latest picture.
-        //        let image = UIImage(named: "placeholder")
-        //        let imageView = UIImageView(image: image!)
-        //        imageView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 600)
-        ////        let blockView = UIImage(named: "placeholder")
-        //        mainView.addSubview(imageView)
-        //        imagePicker.cameraOverlayView = mainView
-        //
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        picker.dismiss(animated: true)
-        
-        guard let image = info[.editedImage] as? UIImage else {
-            print("No image found")
-            return
-        }
-        // print out the image size as a test
-        savePhotos(image: image.pngData())
-        print(image.pngData()!)
-    }*/
-    
-      // -------------------------------------------------------------------------
+
     //MARK: Editing Photos
     func savePhotos(image: Data?) {
         
@@ -251,14 +214,7 @@ class PhotosCollectionViewController: UICollectionViewController, NSFetchedResul
             editBtn.isEnabled = true
             navigationItem.leftBarButtonItems = nil
         }
-        
     }
-    
-    
-    
-    
-    
-    
 }
 
   // -------------------------------------------------------------------------
@@ -274,7 +230,6 @@ extension PhotosCollectionViewController  {
         
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //        print(fetchedResultsController.sections?.count ?? 0)
         return fetchedResultsController.sections?[section].numberOfObjects ?? 0
         
     }
@@ -317,51 +272,6 @@ extension PhotosCollectionViewController  {
             cell?.isSelected = false
     }
     
-//    func deselectAllItems(animated: Bool) {
-//        guard let selectedItems = collectionView.indexPathsForSelectedItems else { return }
-//        for indexPath in selectedItems { deselectItem(at: indexPath, animated: animated) }
-//    }
-    
- 
-//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//       let cell = collectionView.cellForItem(at: indexPath) as! PhotoCollectionViewCell
-//        photoThumbnail = cell.img.image
-//
-//
-//        performSegue(withIdentifier: "photoViewSegue", sender: self)
-//        print("didselectran")
-        
-//        let item = self.savedPhotos[indexPath.row]
-//        self.img.image = UIImage(data: item.imageData! as Data)
-//        self.performSegueWithIdentifier("yourIdentifier")
-        
-//         let selectedCell = collectionView.cellForItem(at: indexPath)
-//        let cellInYourType = selectedCell as! PhotoCollectionViewCell
-//        let image = cellInYourType.img.image
-//        self.performSegue(withIdentifier: "SelectedPhoto", sender: any)
-//        let vc = sender as? UICollectionViewCell as! PhotoCollectionViewCell
-//        vc.imageEnlarged = image;
-//        self.present(vc, animated: true, completion: nil)
-//    }
-    
-    //MARK: Set up collection View Layout
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let width = collectionView.frame.width / numberOfColumns
-//        return CGSize(width: width, height: width)
-//    }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return .zero
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return 0
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        return 0
-//    }
-    
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let totalwidth = collectionView.bounds.size.width;
         let numberOfCellsPerRow = 3
@@ -373,8 +283,4 @@ extension PhotosCollectionViewController  {
             return CGSize(width: dimensions, height: dimensions / 2)
         }
     }
-    
-    
-    
-    
 }

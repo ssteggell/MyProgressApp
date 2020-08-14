@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19G73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Albums" representedClassName="Albums" syncable="YES" codeGenerationType="class">
         <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Photos" inverseName="albums" inverseEntity="Photos"/>
+    </entity>
+    <entity name="Photo" representedClassName=".Photo" syncable="YES" codeGenerationType="class">
+        <attribute name="imageData" optional="YES" attributeType="Binary"/>
+        <attribute name="index" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="urlString" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Photos" representedClassName="Photos" syncable="YES" codeGenerationType="class">
         <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -13,5 +18,6 @@
     <elements>
         <element name="Albums" positionX="-51.53515625" positionY="-19.97265625" width="128" height="88"/>
         <element name="Photos" positionX="296.7109375" positionY="-19.80859375" width="128" height="88"/>
+        <element name="Photo" positionX="126" positionY="9" width="128" height="88"/>
     </elements>
 </model>
